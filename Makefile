@@ -12,6 +12,7 @@ all: vimlab.pdf vimlab.handout.pdf
 
 clean:
 	rm -f vim.handout.tex *.snm *.nav *.vrb
+	rm -rf _minted-*/
 	latexmk -CA
 
 .PHONY: all clean
