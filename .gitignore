@@ -7,3 +7,5 @@ vimlab.handout.tex
 *.snm
 *.toc
 *.vrb
+*.fdb_latexmk
+*.fls

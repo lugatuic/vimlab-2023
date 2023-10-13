@@ -322,6 +322,8 @@
 		\item \keys{y} to copy (\keys{d} cuts) and \keys{p} to paste
 
 		\item \keys{u} and \keys{\ctrl + r} to undo and redo.
+		\item \keys{$\langle\langle$} and \keys{$\rangle\rangle$} to change indentation levels in
+			code.
 	\end{itemize}
 \end{frame}
 
@@ -330,9 +332,64 @@
 	\tableofcontents[currentsubsection]
 \end{frame}
 
+\begin{frame}{Commands}
+	There are lots of commands in \texttt{vim}, just like actions, but we'll
+	just go over a few. To enter Command mode, just prepend a \keys{:}
+	before typing it!
+	\pause
+
+	\begin{itemize}
+		\item \texttt{:write} or \texttt{:w} saves your
+			file\footnote{you can specify a filename afterwards to
+			emulate \menu{File>Save As}}
+			\pause
+
+		\item \texttt{:quit} or \texttt{:q} quits Vim\footnote{add an
+			\texttt{!} to quit and ignore unsaved changes}
+			\pause
+
+		\item \texttt{:\%s/<regex>/<regex>/gc} lets you find and replace
+	\end{itemize}
+	\pause
+
+	Also, \keys{\textbackslash} and \keys{?} let you search within your
+	document.\footnote{use \texttt{:noh} to clear highlighted results after}
+	\keys{n} and \keys{N} let you go backwards/forwards through your search
+	results.
+\end{frame}
+
 \section{Crash Course}
 \begin{frame}{Table of Contents}
 	\tableofcontents[currentsection]
+\end{frame}
+
+\begin{frame}{Crash Course}
+	\textbf{Closing Remarks}
+	\begin{itemize}
+		\item This was a very surface-level introduction to
+			\texttt{vim}.\\
+			Some features not covered include:
+			\begin{itemize}
+				\item Vim Modelines
+				\item Multiplexing buffers
+				\item Macros
+			\end{itemize}
+		\item Don't fret if this is alot of information at once! It's
+			important to start small and \underline{learn what you
+			need as you go}.
+		\item If you want to practice more with \texttt{vim}, try out
+			\texttt{vimtutor} which is a guided tutorial to learn
+			Vim.
+		\item Don't be afraid to reference a cheatsheet like
+			\url{https://vim.rtorr.com/} when learning!
+		\item As always, practice makes perfect.
+	\end{itemize}
+\end{frame}
+
+\begin{frame}{Crash Course}
+	\begin{center}
+		\Huge Thank you!
+	\end{center}
 \end{frame}
 
 \end{document}
