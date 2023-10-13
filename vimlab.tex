@@ -150,12 +150,12 @@
 \subsection{Keybinds}
 \begin{frame}{Keybinds}
 	Modes allow for \texttt{vim} perform actions using simple and easy to
-	remember keystroke sequences! \pause These are known as mmemonics!
+	remember keystroke sequences! \pause These are known as motions!
 	\pause
 
 	\begin{exampleblock}{Example}
 		Navigating can be done with \keys{h}, \keys{j}, \keys{k},
-		\keys{l}. Which corrispond to \keys{\arrowkeyleft},
+		\keys{l} in Normal mode. These corrispond to \keys{\arrowkeyleft},
 		\keys{\arrowkeydown}, \keys{\arrowkeyup}, \keys{\arrowkeyright}
 		respectively.\footnote{People consider using the arrow keys in
 		\texttt{vim} a cardinal sin.}
@@ -167,8 +167,167 @@
 	\pause
 
 	\begin{exampleblock}{Example 2}
-		Additionally, 
+		Additionally, an arbitrary number can be prefixed to
+		\underline{modify} motions.
+		\pause
+
+		One usecase is \keys{5 + j}, which moves down 5 lines in one
+		input sequence.
 	\end{exampleblock}
+\end{frame}
+
+\begin{frame}{Keybinds}
+	How can you easily remember these keybinds?
+	\pause
+
+	Most keybinds are \textbf{mnemonics} for their corrisponding action.
+	\begin{itemize}
+		\item \keys{i}nsert enters Insert mode
+		\item \keys{a}ppend is the same as insert, but starts
+			inserting at the character after the cursor
+		\item \keys{x}-out deletes a single character
+		\item \keys{d} deletes your selection
+		\item \keys{c}hange deletes your selection and enters Insert
+			mode
+		\item etc.
+	\end{itemize}
+	\pause
+
+	There are a billion keybinds in \texttt{vim}, so don't fret about
+	learning all of them at once. Learning as you go is the method here!
+\end{frame}
+
+\begin{frame}[fragile]{Keybinds}
+	\texttt{vim} motions are extremely powerful. They let you condense the
+	work of selecting text and changing it into easy to remember input
+	sequences!
+	\pause
+
+	\begin{exampleblock}{Example 1}
+		\keys{cc} lets you delete a line and start retyping text in one
+		shot (\keys{c}hange a line)! Double pressing most actions will
+		allow you to apply it to the line your cursor is on.
+		\pause
+
+		\bigskip
+
+		\begin{columns}
+			\begin{column}{0.5\textwidth}
+				\textbf{Before}
+				\begin{verbatim}
+				This is a sentence!
+				The cursor is below this line.
+				_Emacs users are stinky :(
+				another wacky line!
+				\end{verbatim}
+			\end{column}
+			\begin{column}{0.5\textwidth}
+				\textbf{After}
+				\begin{verbatim}
+				This is a sentence!
+				The cursor is below this line.
+				_
+				another wacky line!
+				\end{verbatim}
+			\end{column}
+		\end{columns}
+	\end{exampleblock}
+\end{frame}
+
+\begin{frame}[fragile]{Keybinds}
+	\begin{exampleblock}{Example 2}
+		\keys{dw} Lets you \keys{d}elete a \keys{w}ord.
+		\pause
+
+		The \keys{w} works to specify your selection after
+		\underline{any} action! So, this will work with \keys{c} too!
+		\pause
+
+		\medskip
+
+		\begin{columns}
+			\begin{column}{0.5\textwidth}
+				\textbf{Before}
+				\begin{verbatim}
+				This is a sentence!
+				The cursor is below this line.
+				_Emacs users are stinky :(
+				another wacky line!
+				\end{verbatim}
+			\end{column}
+			\begin{column}{0.5\textwidth}
+				\textbf{After}
+				\begin{verbatim}
+				This is a sentence!
+				The cursor is below this line.
+				_ users are stinky :(
+				another wacky line!
+				\end{verbatim}
+			\end{column}
+		\end{columns}
+	\end{exampleblock}
+\end{frame}
+
+\begin{frame}[fragile]{Keybinds}
+	\begin{exampleblock}{Example 3}
+		Commands can be chained too!
+		\keys{2k} and \keys{dip} Lets you move \keys{2} up (\keys{k})
+		and \keys{d}elete the \keys{i}nner
+		\keys{p}aragraph.\footnotemark
+		\pause
+
+		\bigskip
+
+		\begin{columns}
+			\begin{column}{0.5\textwidth}
+				\textbf{Before}
+				\begin{verbatim}
+				This is a sentence!
+				The cursor is below this line.
+				_Emacs users are stinky :(
+				another wacky line!
+				\end{verbatim}
+			\end{column}
+			\begin{column}{0.5\textwidth}
+				\textbf{After}
+				\begin{verbatim}
+				_
+
+
+
+				\end{verbatim}
+			\end{column}
+		\end{columns}
+	\end{exampleblock}
+
+	\footnotetext{inner meaning excluding any spacing surrounding the paragraph}
+\end{frame}
+
+\begin{frame}{Keybinds}
+	Other useful actions include (but not all)...
+	\pause
+
+	\begin{itemize}
+		\item \keys{o} and \keys{O} which creates a new line below/above
+			the current line respectively
+
+		\item \keys{gg} and \keys{G} which puts the cursor at the
+			top/bottom of the file
+
+		\item \keys{zz} which centers the editing window
+
+		\item \keys{b} and \keys{e} goes to the \keys{b}eginning and
+			\keys{e}nd of the word your cursor is currently on.
+
+		\item \keys{y} to copy (\keys{d} cuts) and \keys{p} to paste
+
+		\item \keys{u} and \keys{\ctrl + r} to undo and redo.
+	\end{itemize}
+\end{frame}
+
+\subsection{Commands}
+\begin{frame}{Table of Contents}
+	\tableofcontents[currentsubsection]
 \end{frame}
 
 \section{Crash Course}
