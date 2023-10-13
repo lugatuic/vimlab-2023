@@ -96,9 +96,25 @@
 
 \subsection{Goals}
 \begin{frame}{Goals}
+	We will try to learn:\\
 	\begin{itemize}
-		\item Learn how to switch between the different \textit{modes}
-			of \texttt{vim}.
+		\item How to switch between the different \textit{modes}
+			of \texttt{vim}
+			\pause
+
+		\item How to navigate around a text document using
+			\textbf{modal} keybindings
+			\pause
+
+		\item Methods for remembering the the mnemonics
+			\pause
+
+		\item How to select, manipulate, and insert text into files
+			\pause
+
+		\item How to quit \texttt{vim} without restarting your
+			computer...\footnote{aka commands}
+
 	\end{itemize}
 \end{frame}
 
@@ -350,8 +366,15 @@
 			\pause
 
 		\item \texttt{:\%s/<regex>/<regex>/gc} lets you find and replace
+			\pause
+
+		\item \texttt{:help <command>} brings up the help-page for any
+			Vim command
 	\end{itemize}
 	\pause
+
+	You can also chain commands, so \texttt{:wq} for example saves your file
+	and exits in one shot.\\
 
 	Also, \keys{\textbackslash} and \keys{?} let you search within your
 	document.\footnote{use \texttt{:noh} to clear highlighted results after}
