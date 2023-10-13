@@ -1,6 +1,7 @@
 \documentclass{beamer}
 
 \usepackage{menukeys}
+\usepackage{minted}
 
 \usetheme{Boadilla}
 
@@ -361,6 +362,55 @@
 \section{Crash Course}
 \begin{frame}{Table of Contents}
 	\tableofcontents[currentsection]
+\end{frame}
+
+\begin{frame}
+	Lets try a hands-on demo!
+	\pause
+
+	Firstly, open a terminal!
+	\begin{itemize}
+		\item Windows\\
+			Open one of the following:
+			\begin{itemize}
+				\item Powershell
+				\item PuTTy
+			\end{itemize}
+			You'll need to \texttt{ssh} into
+			\texttt{malware.cs.uic.edu}.\\
+			Syntax: \texttt{ssh userXX@malware.cs.uic.edu}, where
+			$XX$ is a number between 1-25.
+		\item MacOS\\
+			Simply go to \menu{Applications>Utilities>Terminal} and
+			type \texttt{vim}, its included by default!
+		\item Linux\\
+			Open your terminal of choice, install \texttt{vim} if
+			you need to (tho it should be included by default...),
+			and run \texttt{vim}.
+	\end{itemize}
+\end{frame}
+
+\begin{frame}[fragile]{Crash Course}
+	\textbf{Challenge!}\\
+	I want you to create a simple C program using \texttt{vim} and
+	sucessfully compile it! It can be as simple as "Hello, World!" if you'd
+	like!
+
+	\begin{minted}{c}
+		#include <stdio.h>
+
+		int main(int argc, char **argv) {
+			printf("Hello World!\n");
+		}
+	\end{minted}
+
+	If thats too easy for you, try these extra challenges:
+	\begin{itemize}
+		\item Don't use the arrow keys atall
+		\item Write your program in Rust instead
+		\item Do not leave \texttt{vim} at any point when writng the
+			program
+	\end{itemize}
 \end{frame}
 
 \begin{frame}{Crash Course}

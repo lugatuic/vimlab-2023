@@ -9,3 +9,4 @@ vimlab.handout.tex
 *.vrb
 *.fdb_latexmk
 *.fls
+_minted-*/

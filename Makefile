@@ -6,7 +6,7 @@ vimlab.handout.tex: vimlab.tex
 	sed '1s/\documentclass{beamer}/\documentclass[handout]{beamer}/' $^ > $@
 
 %.pdf: %.tex
-	latexmk -pdf -use-make $^
+	latexmk -pdf -shell-escape -use-make $^
 
 all: vimlab.pdf vimlab.handout.pdf
 
