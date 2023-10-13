@@ -10,3 +10,4 @@ vimlab.handout.tex
 *.fdb_latexmk
 *.fls
 _minted-*/
+svg-inkscape/
