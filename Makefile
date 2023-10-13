@@ -1,7 +1,17 @@
 vimlab.pdf: vimlab.tex
-	pdflatex $^
+
+vimlab.handout.pdf: vimlab.handout.tex
+
+vimlab.handout.tex: vimlab.tex
+	sed '1s/\documentclass{beamer}/\documentclass[handout]{beamer}/' $^ > $@
+
+%.pdf: %.tex
+	latexmk -pdf -use-make $^
+
+all: vimlab.pdf vimlab.handout.pdf
 
 clean:
-	rm -f *.log *.pdf *.aux *.out *.nav *.snm *.toc
+	rm -f vim.handout.tex *.snm *.nav
+	latexmk -CA
 
-.PHONY: clean
+.PHONY: all clean
