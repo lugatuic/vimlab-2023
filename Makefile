@@ -11,8 +11,8 @@ vimlab.handout.tex: vimlab.tex
 all: vimlab.pdf vimlab.handout.pdf
 
 clean:
-	rm -f vim.handout.tex *.snm *.nav *.vrb *.pyg
-	rm -rf _minted-*/
 	latexmk -CA
+	rm -f vimlab.handout.tex *.snm *.nav *.vrb *.pyg
+	rm -rf _minted-*/ svg-inkscape/
 
 .PHONY: all clean
